@@ -6,9 +6,9 @@ const _dam = document.querySelector("#dam");
 const _volcano = document.querySelector("#volcano");
 const _reactor = document.querySelector("#reactor");
 const _asteroid = document.querySelector("#asteroid");
-
+console.log('hey');
 const _cookie = document.querySelector('[data-is="cookie"]')
-
+console.log(_cookie)
 const _cps = document.querySelector("#cps");
 let count = 0;
 let clicks_per_second = 0;
