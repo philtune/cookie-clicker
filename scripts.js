@@ -7,6 +7,9 @@ const _volcano = document.querySelector("#volcano");
 const _reactor = document.querySelector("#reactor");
 const _asteroid = document.querySelector("#asteroid");
 
+const _cookie = document.querySelector('[data-is="cookie"]')
+_cookie.addEventListener('mousedown', click_cookie)
+
 const _cps = document.querySelector("#cps");
 let count = 0;
 let clicks_per_second = 0;
