@@ -8,7 +8,6 @@ const _reactor = document.querySelector("#reactor");
 const _asteroid = document.querySelector("#asteroid");
 
 const _cookie = document.querySelector('[data-is="cookie"]')
-_cookie.addEventListener('mousedown', click_cookie)
 
 const _cps = document.querySelector("#cps");
 let count = 0;
@@ -73,36 +72,6 @@ function display_it() {
 		display_count = (count / 10 ** 15).toFixed(decimals);
 		suffix = "Q";
 	}
-	// if (count < 10 ** 3) {
-	// 	display_count = Math.round(decimals);
-	// } else if (count < 10 ** 6) {
-	// 	if (count > 10 ** 5) {
-	// 		decimals = 1;
-	// 	} else if (count > 10 ** 4) {
-	// 		decimals = 2;
-	// 	} else if (count > 10 ** 3) {
-	// 		decimals = 3;
-	// 	}
-	// 	display_count = (count / 10 ** 3).toFixed(decimals);
-	// 	suffix = "K";
-	// } else if (count < 10 ** 9) {
-	// 	if (count > 10 ** 8) {
-	// 		decimals = 1;
-	// 	} else if (count > 10 ** 7) {
-	// 		decimals = 2;
-	// 	}
-	// 	display_count = (count / 10 ** 6).toFixed(decimals);
-	// 	suffix = "M";
-	// } else if (count < 10 ** 12) {
-	// 	display_count = (count / 10 ** 9).toFixed(decimals);
-	// 	suffix = "B";
-	// } else if (count < 10 ** 15) {
-	// 	display_count = (count / 10 ** 12).toFixed(decimals);
-	// 	suffix = "T";
-	// } else {
-	// 	display_count = (count / 10 ** 15).toFixed(decimals);
-	// 	suffix = "Q";
-	// }
 	_counter.innerText = display_count.toLocaleString() + suffix;
 }
 function reset() {
@@ -114,6 +83,7 @@ function click_cookie() {
 	count++;
 	display_it();
 }
+_cookie.addEventListener('mousedown', click_cookie)
 function add_oven() {
 	if (count >= 25) {
 		count -= 25;
